@@ -372,7 +372,7 @@ def compute_multi_epi_mask(
             If 3D images are given, we suggest to use the mean image
             of each run.
 
-    threshold : :obj:`float`, optional
+    threshold : :obj:`float`, default=0.5
         The inter-run threshold: the fraction of the
         total number of runs in for which a :term:`voxel` must be
         in the mask to be kept in the common mask.
@@ -544,7 +544,7 @@ def compute_multi_background_mask(
             If 3D images are given, we suggest to use the mean image
             of each run.
 
-    threshold : :obj:`float`, optional
+    threshold : :obj:`float`, default=0.5
         The inter-run threshold: the fraction of the
         total number of run in for which a :term:`voxel` must be
         in the mask to be kept in the common mask.
@@ -775,7 +775,7 @@ def apply_mask(
         See :ref:`extracting_data`.
         3D mask array: True where a :term:`voxel` should be used.
 
-    dtype: numpy dtype or 'f'
+    dtype: numpy dtype or 'f', default='f'
         The dtype of the output, if 'f', any float output is acceptable
         and if the data is stored on the disk as floats the data type
         will not be changed.
