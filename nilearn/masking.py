@@ -867,7 +867,7 @@ def apply_mask_fmri(
     return series[mask_data].T
 
 
-def _unmask_3d(X, mask, order="C"):
+def _unmask_3d(X, mask, order="F"):
     """Take masked data and bring them back to 3D (space only).
 
     Parameters
@@ -896,7 +896,7 @@ def _unmask_3d(X, mask, order="C"):
     return data
 
 
-def _unmask_4d(X, mask, order="C"):
+def _unmask_4d(X, mask, order="F"):
     """Take masked data and bring them back to 4D.
 
     Parameters
